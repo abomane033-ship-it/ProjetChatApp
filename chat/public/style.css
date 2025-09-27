@@ -1,0 +1,31 @@
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-size: cover; 
+    background-position: center; 
+    margin: 0; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.chat-container { 
+    width: 52.7%; 
+    max-width: 1200px; 
+    height: 90vh; 
+    display: flex; 
+    box-shadow: 0 5px 15px #00000033; 
+    background: linear-gradient(#037691 100%); 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    padding-bottom: 20px; 
+}
+.sidebar{
+    width: 300px; 
+    height: 100%; 
+    background-color: #037691; 
+    padding: 20px; display: flex; 
+    flex-direction: column; 
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}

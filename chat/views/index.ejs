@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Document</title>
+</head>
+<body>
+ <div class="chat-container">
+    <div id="loginPage">
+        <input id="usernameInput" type="text" placeholder="Nom d'utilisateur">
+        <button id="loginButton">Se Connecter</button>
+    </div>
+    <div id="chatPage">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Chats</h2>
+                <button class="new-chat" id="new chat-btn">Creer un groupe</button>
+            </div>
+            <input type="text" class="search-bar" id="search-input" placeholder="Rechercher une message">
+            <div class="chat-list" id="chat-list"></div>
+            <div class="user-profile"></div>
+            <img src="views/Capture d'écran 2025-01-08 111628.png" alt="User">
+            <div class="user-info">
+                <p id="username" class="username"></p>
+                <p class="user-status">En ligne</p>
+                <button>Paramètre</button>
+            </div>
+        </div>
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <img src="views/Capture d'écran 2025-01-08 111628.png" alt="chat">
+                    <div class="chat-header-info">
+                        <p id="chat-header-name" class="chat-header-name"></p>
+                        <p class="chat-header-status">En ligne</p>
+                    </div>
+                </div>
+                <div class="chat-header-icons">
+                    <button id="phone-btn"></button>
+                    <button id="video-btn"></button>
+                </div>
+            </div>
+            <div class="chat-messages" id="messages"></div>
+            <div class="input-bar"></div>
+            <button id="voice-btn"></button>
+            <button id="video-call-btn"></button>
+            <button id="attach-btn"></button>
+            <button id="Emoji-btn"></button>
+            <button id="voice-btn"></button>
+            <input type="text" id="messageInput" class="input-field" placeholder="message..">
+            <button class="sendBtn" class="send-button">Envoyer</button>
+        </div>
+    </div>
+ </div>
+
+ <script src="/socket.io/socket.io.js"></script>
+ <script src="/client.js"></script>
+</body>
+</html>
