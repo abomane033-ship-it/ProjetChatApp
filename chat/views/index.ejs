@@ -72,12 +72,12 @@
     box-sizing: border-box; 
 }
 .chat-container { 
-    width: 52.7%; 
+    width: 60%; 
     max-width: 1200px; 
     height: 90vh; 
     display: flex; 
     box-shadow: 0 5px 15px #00000033; 
-    background: linear-gradient(#037691 100%); 
+    background: linear-gradient(#1A2D42 100%); 
     border-radius: 15px; 
     overflow: hidden; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
@@ -86,7 +86,7 @@
 .sidebar{
     width: 300px; 
     height: 100%; 
-    background-color: #037691; 
+    background-color: #2E4156; 
     padding: 20px; display: flex; 
     flex-direction: column; 
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -213,7 +213,7 @@
     font-weight: 600; 
     margin: 0 0 4px 0; 
     font-size: 0.95rem; 
-    color: #037691; 
+    color: #AAB7B7; 
 } 
 .chat-message { 
     margin: 0; 
@@ -275,4 +275,216 @@
     opacity: 0.7;
     transition: opacity 0.2s;
 }
+.user-profile button:hover { 
+    opacity: 1; 
+} 
+.main-chat { 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    background-color: white; 
+    border-radius: 0 15px 15px 0; 
+    padding-bottom: 0%; 
+} 
+.chat-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 30px 20px; 
+    border-bottom: 1px solid #2a2b3e; 
+    background-color: #037691; 
+    color: white; 
+} 
+.chat-header-left { 
+    display: flex; 
+    align-items: center; 
+} 
+.chat-header-left img { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 12px; 
+    object-fit: cover; 
+    color: #ffffff;
+}
+.chat-header-name { 
+    font-weight: 600; 
+    margin: 0 0 4px 0; 
+    font-size: 1rem; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    color: #ffffff; 
+} 
+.chat-header-status { 
+    margin: 0; 
+    font-size: 0.8rem; 
+    color: #00c853; 
+} 
+.chat-header-icons button { 
+    background: none; 
+    border: none; 
+    color: #ffffff; 
+    font-size: 1.2rem; 
+    margin-left: 15px; 
+    cursor: pointer; 
+    opacity: 0.7; 
+    transition: opacity 0.2s; 
+} 
+.chat-header-icons button:hover { 
+    opacity: 1; 
+} 
+.chat-messages { 
+    flex-grow: 6; 
+    padding: 20px; 
+    overflow-y: auto; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: #f5f9fa; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #1a1b2e;
+    max-height: calc(90vh - 150px);
+}
+.message { 
+    word-wrap: break-word; 
+    max-width: 70%; 
+    padding: 5px 16px; 
+    border-radius: 18px; 
+    margin-bottom: 12px; 
+    font-size: 0.95rem; 
+    line-height: 1.4; 
+    position: relative; 
+} 
+.received { 
+    background-color: #2a2b3e; 
+    align-self: flex-start; 
+    border-bottom-left-radius: 4px; 
+} 
+.sent { 
+    border-bottom-right-radius: 4px; 
+    background-color: #037691; 
+    align-self: flex-end; 
+    color: white; 
+} 
+.message-time { 
+    font-size: 0.7rem; 
+    color: #ffffff99; 
+    margin-top: 4px; 
+    text-align: right; 
+} 
+.input-bar { 
+    display: flex; 
+    align-items: center; 
+    padding: 15px 20px; 
+    background-color: #037691;
+    border-top: 1px solid #2a2b3e;
+} 
+.input-bar button { 
+    background: none; 
+    border: none; 
+    color: #ffffff; 
+    font-size: 1.2rem; 
+    margin-right: 12px; 
+    cursor: pointer; 
+    opacity: 0.7; 
+    transition: opacity 0.2s; 
+} 
+.input-bar button:hover { 
+    opacity: 1; 
+} 
+.input-field { 
+    flex-grow: 1; 
+    background-color: #f5f9fa; 
+    border: 1px solid #e1e5e8; 
+    padding: 12px 18px; 
+    color: #333; 
+    border-radius: 24px; 
+    font-size: 0.95rem; 
+    transition: box-shadow 0.2s; 
+} 
+.input-field:focus { 
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); 
+} 
+.send-button { 
+    font-weight: 500; 
+    background-color: #037691; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 24px; 
+    margin-left: 10px; 
+    cursor: pointer;
+    transition: background-color 0.2s;  
+}
+.send-button:hover { 
+    background-color: #02607a; 
+} 
+.cloud-save { 
+    text-align: center; 
+    font-size: 0.75rem; 
+    color: #ffffff; 
+    padding: 8px 0; 
+    margin-top: 0px; 
+    border-top: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #037691; 
+} 
+.cloud-save i { 
+    margin-right: 6px; 
+    font-size: 0.9rem; 
+} 
+#loginPage { 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    background-color: #D4D8DD; 
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    width: 100%; 
+    max-width: 400px; 
+    margin: auto; 
+} 
+#loginPage input { 
+    text-align: center;
+    padding: 12px; 
+    margin-bottom: 15px;
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 3px solid #2E4156; 
+    border-radius: 4px; 
+    background-color: white; 
+    color: #2E4156; 
+    font-size: 0.95rem; 
+}
+#loginPage input:focus { 
+    outline: none; 
+    border-color: #2E4156; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); 
+} 
+#loginPage button { 
+    padding: 12px 24px; 
+    background-color: #1A2D42; 
+    color: white; 
+    border: 3px solid #AAB7B7; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 0.95rem; 
+    font-weight: 500; 
+    width: 100%; 
+    transition: background-color 0.2s; 
+} 
+#loginPage button:hover { 
+    background-color: #2E4156; 
+}
+
 </style>
