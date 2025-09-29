@@ -486,5 +486,94 @@
 #loginPage button:hover { 
     background-color: #2E4156; 
 }
-
+.file-message a { 
+    color: #037691; 
+    font-weight: 500; 
+    font-size: 0.9rem; 
+    margin-top: 10px; 
+    display: inline-block; 
+    text-align: center; 
+    width: 85%; 
+    border-radius: 18px; 
+    text-decoration: none;
+    padding: 8px 12px;
+    background: #f0f0f0; 
+    border-radius: 18px; 
+    display: inline-block; 
+}
+.file-message a:hover { 
+    text-decoration: underline; 
+}
+.input-bar {
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    padding: 10px; 
+}
+.modal { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+} 
+.modal-content { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 5px; 
+    width: 300px; 
+    text-align: center; 
+    border: 10px solid #037691;
+}
+.modal-content h3 { 
+    margin-top: 0; 
+} 
+.modal-content button { 
+    margin: 5px; 
+    padding: 5px 10px; 
+} 
+#userList div { 
+    display: flex; 
+    align-items: center; 
+    margin: 5px 0; 
+}
+#userList input[type="checkbox"] { 
+    margin-right: 10px; 
+} 
+.audio-message { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+} 
+.audio-message audio { 
+    max-width: 200px; 
+    border-radius: 5px; 
+} 
+.timestamp { 
+    font-size: 0.8em; 
+    color: #666; 
+    margin-left: 10px; 
+} 
+#call-interface { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background-color: #1a1b2e; 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column; } 
+    .call-top-bar { 
+        display: flex; 
+        align-items: center; 
+        padding: 10px 20px; 
+        background-color: #2a2b3e; 
+        color: white; 
+    }
 </style>
