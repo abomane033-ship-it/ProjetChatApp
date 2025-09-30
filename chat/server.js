@@ -184,13 +184,8 @@ socket.on('group message', (data) => {
     console.log(`groupe ${groupName} crée avec: ${[...groups[groupName]].join(',')}`);
     });
 
-
-});
-
-
-
-// gérer les fichiers
-socket.on('send file',(data) => {
+    // gérer les fichiers
+    socket.on('send file',(data) => {
     if( !socket.username || !data.to || !data.file || !data.file.path) return;
 
     const filePath = path.join(__dirname, data.file.path);
@@ -225,7 +220,6 @@ socket.on('send file',(data) => {
         }
     }
 });
-
 // gérer la deconnexion
 socket.on('disconnect', async () => {
     if (socket.username) {
@@ -233,7 +227,8 @@ socket.on('disconnect', async () => {
       console.log(`${socket.username} déconnecté`);
     }
   });
-//gestion des appels video
+
+  //gestion des appels video
 socket.on('start call',(data) => {
     const { to, isGroup} = data;
     const callId = isGroup ? to: [socket.username, to].sort().join('-');
@@ -314,6 +309,7 @@ socket.on('send sticker', (data) => {
     });
 });
 
+});
 
 server.listen(PORT, '0.0.0.0',() => {
     console.log(`server démaré sur http://localhost:${4000}`);
